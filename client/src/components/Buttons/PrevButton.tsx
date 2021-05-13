@@ -15,7 +15,7 @@ export default function PrevButton({ prev }: IPrevButtonProps) {
       icon={
         <Icon
           name="skip-previous"
-          type="material-community-icons"
+          type="material-community"
           size={35}
           color={"#fff"}
         />
