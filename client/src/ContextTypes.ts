@@ -13,5 +13,9 @@ export interface IConnectionContextProps {
 }
 
 export enum Command {
-  PLAY_PAUSE
+  PLAY_PAUSE,
+  NEXT,
+  PREV,
+  VOLUME_UP,
+  VOLUME_DOWN,
 }
