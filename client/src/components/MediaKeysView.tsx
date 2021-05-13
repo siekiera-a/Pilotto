@@ -1,49 +1,28 @@
-import React, { useContext } from 'react';
-import { View, StyleSheet } from 'react-native';
-import { Icon, FAB } from 'react-native-elements';
-import { connectionContext } from '../ConnectionContext';
-import { Command } from '../ContextTypes';
+import React, { useCallback, useContext } from "react";
+import { View, StyleSheet } from "react-native";
+import { connectionContext } from "../ConnectionContext";
+import { Command } from "../ContextTypes";
+import PlayPauseButton from "./Buttons/PlayPauseButton";
 
 export default function MediaKeysView() {
   const { send } = useContext(connectionContext);
 
-  const playPause = () => {
+  const playPause = useCallback(() => {
     send(Command.PLAY_PAUSE);
-  };
+  }, [send]);
 
   return (
     <View style={styles.container}>
-      <FAB
-        color={'#F72585'}
-        buttonStyle={styles.playButton}
-        containerStyle={styles.playButton}
-        icon={
-          <Icon
-            name="play-pause"
-            type="material-community"
-            size={50}
-            color={'#fff'}
-          />
-        }
-        onPress={playPause}
-      />
+      <PlayPauseButton playPause={playPause}/>
     </View>
   );
 }
 
-const playButtonSize = 100;
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  playButton: {
-    borderRadius: 50,
-    width: playButtonSize,
-    height: playButtonSize,
-    elevation: 0,
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
