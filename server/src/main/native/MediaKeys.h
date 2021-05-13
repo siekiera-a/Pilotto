@@ -15,6 +15,38 @@ extern "C" {
 JNIEXPORT void JNICALL Java_pl_pilotto_server_service_media_WindowsMediaKeysService_playPause
   (JNIEnv *, jobject);
 
+/*
+ * Class:     pl_pilotto_server_service_media_WindowsMediaKeysService
+ * Method:    next
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_pl_pilotto_server_service_media_WindowsMediaKeysService_next
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     pl_pilotto_server_service_media_WindowsMediaKeysService
+ * Method:    prev
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_pl_pilotto_server_service_media_WindowsMediaKeysService_prev
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     pl_pilotto_server_service_media_WindowsMediaKeysService
+ * Method:    volumeUp
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_pl_pilotto_server_service_media_WindowsMediaKeysService_volumeUp
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     pl_pilotto_server_service_media_WindowsMediaKeysService
+ * Method:    volumeDown
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_pl_pilotto_server_service_media_WindowsMediaKeysService_volumeDown
+  (JNIEnv *, jobject);
+
 #ifdef __cplusplus
 }
 #endif

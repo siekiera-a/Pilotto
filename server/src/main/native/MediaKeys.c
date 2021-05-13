@@ -35,3 +35,27 @@ JNIEXPORT void JNICALL Java_pl_pilotto_server_service_media_WindowsMediaKeysServ
 {
     click(VK_MEDIA_PLAY_PAUSE);
 }
+
+JNIEXPORT void JNICALL Java_pl_pilotto_server_service_media_WindowsMediaKeysService_next
+    (JNIEnv *env, jobject obj)
+{
+    click(VK_MEDIA_NEXT_TRACK);
+}
+
+JNIEXPORT void JNICALL Java_pl_pilotto_server_service_media_WindowsMediaKeysService_prev
+    (JNIEnv *env, jobject obj)
+{
+    click(VK_MEDIA_PREV_TRACK);
+}
+
+JNIEXPORT void JNICALL Java_pl_pilotto_server_service_media_WindowsMediaKeysService_volumeUp
+    (JNIEnv *env, jobject obj)
+{
+    click(VK_VOLUME_UP);
+}
+
+JNIEXPORT void JNICALL Java_pl_pilotto_server_service_media_WindowsMediaKeysService_volumeDown
+    (JNIEnv *env, jobject obj)
+{
+    click(VK_VOLUME_DOWN);
+}

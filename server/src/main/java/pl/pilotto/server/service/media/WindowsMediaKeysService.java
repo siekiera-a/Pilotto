@@ -21,4 +21,16 @@ public class WindowsMediaKeysService implements MediaKeysService {
     @Override
     public native void playPause();
 
+    @Override
+    public native void next();
+
+    @Override
+    public native void prev();
+
+    @Override
+    public native void volumeUp();
+
+    @Override
+    public native void volumeDown();
+
 }
