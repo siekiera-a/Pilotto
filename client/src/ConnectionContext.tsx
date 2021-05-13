@@ -36,28 +36,36 @@ export function ConnectionContextProvider({
 
   const connect = (ip: string) => {
     const url = `ws://${ip}:${port}/listener`;
-    const client = Stomp.client(url);
 
-    client.connect(
-      {},
-      () => {
-        setConnected(true);
-        setServerAddress(ip);
-        setError(false);
-        setErrorMessage('');
-      },
-      (err: Stomp.Frame | CloseEvent) => {
-        setError(true);
-        if (err instanceof Stomp.Frame) {
-          setErrorMessage('Some error occured!');
-        } else {
-          setErrorMessage(err.reason);
+    try {
+      const client = Stomp.client(url);
+
+      client.connect(
+        {},
+        () => {
+          setConnected(true);
+          setServerAddress(ip);
+          setError(false);
+          setErrorMessage('');
+        },
+        (err: Stomp.Frame | CloseEvent) => {
+          setError(true);
+          if (err instanceof Stomp.Frame) {
+            setErrorMessage('Some error occured!');
+          } else {
+            setErrorMessage(
+              err.reason ? err.reason : `Lost connection to: ${ip}`
+            );
+          }
+          console.error(err);
         }
-        console.error(err);
-      }
-    );
+      );
 
-    connection = client;
+      connection = client;
+    } catch (e) {
+      setError(true);
+      setErrorMessage(`Cannot connect to ${ip}`);
+    }
   };
 
   const disconnect = () => {
