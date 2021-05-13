@@ -6,7 +6,6 @@ import NextButton from "./Buttons/NextButton";
 import PlayPauseButton from "./Buttons/PlayPauseButton";
 import PrevButton from "./Buttons/PrevButton";
 import VolumeDownButton from "./Buttons/VolumeDownButton";
-import VolumeMuteButton from "./Buttons/VolumeMuteButton";
 import VolumeUpButton from "./Buttons/VolumeUpButton";
 
 export default function MediaKeysView() {
@@ -32,10 +31,6 @@ export default function MediaKeysView() {
     send(Command.VOLUME_UP);
   }, [send]);
 
-  const volumeMute = useCallback(() => {
-    send(Command.VOLUME_MUTE);
-  }, [send]);
-
   return (
     <View style={styles.container}>
       <View style={styles.line} />
@@ -46,7 +41,7 @@ export default function MediaKeysView() {
       </View>
       <View style={[styles.line, styles.horizontalLine]}>
         <VolumeDownButton volumeDown={volumeDown} />
-        <VolumeMuteButton volumeMute={volumeMute} style={styles.centerButton} />
+        <View style={styles.divider} />
         <VolumeUpButton volumeUp={volumeUp} />
       </View>
     </View>
@@ -56,6 +51,9 @@ export default function MediaKeysView() {
 const margin = 20;
 
 const styles = StyleSheet.create({
+  divider: {
+    width: margin,
+  },
   line: {
     flex: 1,
   },

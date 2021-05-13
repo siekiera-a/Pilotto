@@ -18,5 +18,4 @@ export enum Command {
   PREV,
   VOLUME_UP,
   VOLUME_DOWN,
-  VOLUME_MUTE,
 }
