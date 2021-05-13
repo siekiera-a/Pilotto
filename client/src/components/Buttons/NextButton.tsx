@@ -16,7 +16,7 @@ export default function NextButton({ next }: INextButtonProps) {
         <Icon
           name="skip-next"
           type="material-community-icons"
-          size={50}
+          size={35}
           color={"#fff"}
         />
       }
