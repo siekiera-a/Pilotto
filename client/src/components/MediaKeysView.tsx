@@ -5,6 +5,9 @@ import { Command } from "../ContextTypes";
 import NextButton from "./Buttons/NextButton";
 import PlayPauseButton from "./Buttons/PlayPauseButton";
 import PrevButton from "./Buttons/PrevButton";
+import VolumeDownButton from "./Buttons/VolumeDownButton";
+import VolumeMuteButton from "./Buttons/VolumeMuteButton";
+import VolumeUpButton from "./Buttons/VolumeUpButton";
 
 export default function MediaKeysView() {
   const { send } = useContext(connectionContext);
@@ -21,12 +24,30 @@ export default function MediaKeysView() {
     send(Command.PREV);
   }, [send]);
 
+  const volumeDown = useCallback(() => {
+    send(Command.VOLUME_DOWN);
+  }, [send]);
+
+  const volumeUp = useCallback(() => {
+    send(Command.VOLUME_UP);
+  }, [send]);
+
+  const volumeMute = useCallback(() => {
+    send(Command.VOLUME_MUTE);
+  }, [send]);
+
   return (
     <View style={styles.container}>
-      <View style={styles.middleLine}>
+      <View style={styles.line} />
+      <View style={[styles.horizontalLine, styles.line]}>
         <PrevButton prev={prev} />
-        <PlayPauseButton playPause={playPause} style={styles.playPause} />
+        <PlayPauseButton playPause={playPause} style={styles.centerButton} />
         <NextButton next={next} />
+      </View>
+      <View style={[styles.line, styles.horizontalLine]}>
+        <VolumeDownButton volumeDown={volumeDown} />
+        <VolumeMuteButton volumeMute={volumeMute} style={styles.centerButton} />
+        <VolumeUpButton volumeUp={volumeUp} />
       </View>
     </View>
   );
@@ -35,18 +56,21 @@ export default function MediaKeysView() {
 const margin = 20;
 
 const styles = StyleSheet.create({
+  line: {
+    flex: 1,
+  },
   container: {
     flex: 1,
     width: "100%",
     alignItems: "center",
     justifyContent: "center",
   },
-  middleLine: {
+  horizontalLine: {
     width: "100%",
     flexDirection: "row",
     justifyContent: "center",
   },
-  playPause: {
+  centerButton: {
     marginLeft: margin,
     marginRight: margin,
   },
