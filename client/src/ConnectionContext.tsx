@@ -32,8 +32,7 @@ export function ConnectionContextProvider({
   const [serverAddress, setServerAddress] = useState('');
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
-
-  let connection: Stomp.Client | null = null;
+  const [connection, setConnection] = useState<Stomp.Client | null>(null);
 
   const connect = (ip: string) => {
     const url = `http://${ip}:${port}/listener`;
@@ -62,7 +61,7 @@ export function ConnectionContextProvider({
         }
       );
 
-      connection = client;
+      setConnection(client);
     } catch (e) {
       setError(true);
       setErrorMessage(`Cannot connect to ${ip}`);
@@ -72,7 +71,7 @@ export function ConnectionContextProvider({
   const disconnect = () => {
     if (connection && connection.connected) {
       connection.disconnect();
-      connection = null;
+      setConnection(null);
     }
 
     setConnected(false);
@@ -83,7 +82,7 @@ export function ConnectionContextProvider({
 
   const send = (command: Command) => {
     if (connection && connection.connected) {
-      connection.send(path, JSON.stringify({ command: command.toString() }));
+      connection.send(path, JSON.stringify({ command: Command[command] }));
     }
   };
 
