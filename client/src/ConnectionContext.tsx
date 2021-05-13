@@ -5,6 +5,7 @@ import {
   IConnectionContextProps,
 } from './ContextTypes';
 import * as Stomp from 'webstomp-client';
+import SockJS from 'sockjs-client';
 
 const defaultValue: IConnectionContext = {
   connected: false,
@@ -35,10 +36,10 @@ export function ConnectionContextProvider({
   let connection: Stomp.Client | null = null;
 
   const connect = (ip: string) => {
-    const url = `ws://${ip}:${port}/listener`;
+    const url = `http://${ip}:${port}/listener`;
 
     try {
-      const client = Stomp.client(url);
+      const client = Stomp.over(new SockJS(url));
 
       client.connect(
         {},
