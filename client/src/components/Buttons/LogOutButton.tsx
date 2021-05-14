@@ -1,6 +1,6 @@
-import React from "react";
-import { FAB, Icon } from "react-native-elements";
-import { StyleSheet } from "react-native";
+import React from 'react';
+import { FAB, Icon } from 'react-native-elements';
+import { StyleSheet } from 'react-native';
 
 export interface ILogOutButtonProps {
   logOut(): void;
@@ -9,7 +9,6 @@ export interface ILogOutButtonProps {
 export default function LogOutButton({ logOut }: ILogOutButtonProps) {
   return (
     <FAB
-      color={"#F72585"}
       buttonStyle={styles.logOutButton}
       containerStyle={styles.logOutButton}
       icon={
@@ -17,7 +16,7 @@ export default function LogOutButton({ logOut }: ILogOutButtonProps) {
           name="logout"
           type="material-community"
           size={40}
-          color={"#fff"}
+          color={'#fff'}
         />
       }
       onPress={logOut}

@@ -1,6 +1,6 @@
-import React from "react";
-import { FAB, Icon } from "react-native-elements";
-import { StyleSheet } from "react-native";
+import React from 'react';
+import { FAB, Icon } from 'react-native-elements';
+import { StyleSheet } from 'react-native';
 
 export interface IHibernateButtonProps {
   hibernate(): void;
@@ -9,10 +9,9 @@ export interface IHibernateButtonProps {
 export default function HibernateButton({ hibernate }: IHibernateButtonProps) {
   return (
     <FAB
-      color={"#F72585"}
       buttonStyle={styles.hibernateButton}
       containerStyle={styles.hibernateButton}
-      icon={<Icon name="moon" type="ionicon" size={40} color={"#fff"} />}
+      icon={<Icon name="moon" type="ionicon" size={40} color={'#fff'} />}
       onPress={hibernate}
     />
   );

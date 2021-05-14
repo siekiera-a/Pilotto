@@ -1,6 +1,6 @@
-import React from "react";
-import { FAB, Icon } from "react-native-elements";
-import { StyleSheet } from "react-native";
+import React from 'react';
+import { FAB, Icon } from 'react-native-elements';
+import { StyleSheet } from 'react-native';
 
 export interface IVolumeDownButtonProps {
   volumeDown(): void;
@@ -11,7 +11,6 @@ export default function VolumeDownButton({
 }: IVolumeDownButtonProps) {
   return (
     <FAB
-      color={"#F72585"}
       buttonStyle={styles.volumeDownButton}
       containerStyle={styles.volumeDownButton}
       icon={
@@ -19,7 +18,7 @@ export default function VolumeDownButton({
           name="volume-minus"
           type="material-community"
           size={23}
-          color={"#fff"}
+          color={'#fff'}
         />
       }
       onPress={volumeDown}

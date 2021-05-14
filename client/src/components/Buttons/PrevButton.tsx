@@ -1,6 +1,6 @@
-import React from "react";
-import { FAB, Icon } from "react-native-elements";
-import { StyleSheet } from "react-native";
+import React from 'react';
+import { FAB, Icon } from 'react-native-elements';
+import { StyleSheet } from 'react-native';
 
 export interface IPrevButtonProps {
   prev(): void;
@@ -9,7 +9,6 @@ export interface IPrevButtonProps {
 export default function PrevButton({ prev }: IPrevButtonProps) {
   return (
     <FAB
-      color={"#F72585"}
       buttonStyle={styles.prevButton}
       containerStyle={styles.prevButton}
       icon={
@@ -17,7 +16,7 @@ export default function PrevButton({ prev }: IPrevButtonProps) {
           name="skip-previous"
           type="material-community"
           size={35}
-          color={"#fff"}
+          color={'#fff'}
         />
       }
       onPress={prev}

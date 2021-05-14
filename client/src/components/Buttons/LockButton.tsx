@@ -1,6 +1,6 @@
-import React from "react";
-import { FAB, Icon } from "react-native-elements";
-import { StyleSheet } from "react-native";
+import React from 'react';
+import { FAB, Icon } from 'react-native-elements';
+import { StyleSheet } from 'react-native';
 
 export interface ILockButtonProps {
   lock(): void;
@@ -9,10 +9,9 @@ export interface ILockButtonProps {
 export default function LockButton({ lock }: ILockButtonProps) {
   return (
     <FAB
-      color={"#F72585"}
       buttonStyle={styles.lockButton}
       containerStyle={styles.lockButton}
-      icon={<Icon name="lock-closed" type="ionicon" size={40} color={"#fff"} />}
+      icon={<Icon name="lock-closed" type="ionicon" size={40} color={'#fff'} />}
       onPress={lock}
     />
   );

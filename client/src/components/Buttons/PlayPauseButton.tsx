@@ -1,6 +1,6 @@
-import React from "react";
-import { FAB, Icon } from "react-native-elements";
-import { StyleProp, StyleSheet, ViewStyle } from "react-native";
+import React from 'react';
+import { FAB, Icon } from 'react-native-elements';
+import { StyleProp, StyleSheet, ViewStyle } from 'react-native';
 
 export interface IPlayPauseButtonProps {
   playPause(): void;
@@ -13,7 +13,6 @@ export default function PlayPauseButton({
 }: IPlayPauseButtonProps) {
   return (
     <FAB
-      color={"#F72585"}
       buttonStyle={styles.playButton}
       containerStyle={[styles.playButton, style]}
       icon={
@@ -21,7 +20,7 @@ export default function PlayPauseButton({
           name="play-pause"
           type="material-community"
           size={50}
-          color={"#fff"}
+          color={'#fff'}
         />
       }
       onPress={playPause}

@@ -1,6 +1,6 @@
-import React from "react";
-import { FAB, Icon } from "react-native-elements";
-import { StyleSheet } from "react-native";
+import React from 'react';
+import { FAB, Icon } from 'react-native-elements';
+import { StyleSheet } from 'react-native';
 
 export interface IVolumeUpButtonProps {
   volumeUp(): void;
@@ -9,7 +9,6 @@ export interface IVolumeUpButtonProps {
 export default function VolumeUpButton({ volumeUp }: IVolumeUpButtonProps) {
   return (
     <FAB
-      color={"#F72585"}
       buttonStyle={styles.volumeUpButton}
       containerStyle={styles.volumeUpButton}
       icon={
@@ -17,7 +16,7 @@ export default function VolumeUpButton({ volumeUp }: IVolumeUpButtonProps) {
           name="volume-plus"
           type="material-community"
           size={23}
-          color={"#fff"}
+          color={'#fff'}
         />
       }
       onPress={volumeUp}

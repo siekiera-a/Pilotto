@@ -1,6 +1,6 @@
-import React from "react";
-import { FAB, Icon } from "react-native-elements";
-import { StyleSheet } from "react-native";
+import React from 'react';
+import { FAB, Icon } from 'react-native-elements';
+import { StyleSheet } from 'react-native';
 
 export interface INextButtonProps {
   next(): void;
@@ -9,7 +9,6 @@ export interface INextButtonProps {
 export default function NextButton({ next }: INextButtonProps) {
   return (
     <FAB
-      color={"#F72585"}
       buttonStyle={styles.nextButton}
       containerStyle={styles.nextButton}
       icon={
@@ -17,7 +16,7 @@ export default function NextButton({ next }: INextButtonProps) {
           name="skip-next"
           type="material-community"
           size={35}
-          color={"#fff"}
+          color={'#fff'}
         />
       }
       onPress={next}
