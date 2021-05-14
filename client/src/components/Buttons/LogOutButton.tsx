@@ -16,7 +16,7 @@ export default function LogOutButton({ logOut }: ILogOutButtonProps) {
         <Icon
           name="logout"
           type="material-community"
-          size={35}
+          size={40}
           color={"#fff"}
         />
       }
@@ -25,7 +25,7 @@ export default function LogOutButton({ logOut }: ILogOutButtonProps) {
   );
 }
 
-const logOutButtonSize = 65;
+const logOutButtonSize = 85;
 
 const styles = StyleSheet.create({
   logOutButton: {

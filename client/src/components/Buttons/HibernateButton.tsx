@@ -12,13 +12,13 @@ export default function HibernateButton({ hibernate }: IHibernateButtonProps) {
       color={"#F72585"}
       buttonStyle={styles.hibernateButton}
       containerStyle={styles.hibernateButton}
-      icon={<Icon name="moon" type="ionicon" size={35} color={"#fff"} />}
+      icon={<Icon name="moon" type="ionicon" size={40} color={"#fff"} />}
       onPress={hibernate}
     />
   );
 }
 
-const hibernateButtonSize = 65;
+const hibernateButtonSize = 85;
 
 const styles = StyleSheet.create({
   hibernateButton: {

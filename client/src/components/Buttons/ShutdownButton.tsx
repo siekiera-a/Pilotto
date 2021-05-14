@@ -12,20 +12,13 @@ export default function ShutdownButton({ shutdown }: IShutdownButtonProps) {
       color={"#F72585"}
       buttonStyle={styles.shutdownButton}
       containerStyle={styles.shutdownButton}
-      icon={
-        <Icon
-          name="power"
-          type="fontisto"
-          size={35}
-          color={"#fff"}
-        />
-      }
+      icon={<Icon name="power" type="ionicon" size={40} color={"#fff"} />}
       onPress={shutdown}
     />
   );
 }
 
-const shutdownButtonSize = 65;
+const shutdownButtonSize = 85;
 
 const styles = StyleSheet.create({
   shutdownButton: {

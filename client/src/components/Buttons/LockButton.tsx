@@ -12,13 +12,13 @@ export default function LockButton({ lock }: ILockButtonProps) {
       color={"#F72585"}
       buttonStyle={styles.lockButton}
       containerStyle={styles.lockButton}
-      icon={<Icon name="lock-closed" type="ionicon" size={35} color={"#fff"} />}
+      icon={<Icon name="lock-closed" type="ionicon" size={40} color={"#fff"} />}
       onPress={lock}
     />
   );
 }
 
-const lockButtonSize = 65;
+const lockButtonSize = 85;
 
 const styles = StyleSheet.create({
   lockButton: {
