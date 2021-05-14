@@ -1,10 +1,4 @@
-import React, {
-  useCallback,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { StyleSheet, TextInput, View, Alert } from 'react-native';
 import { Button, Input } from 'react-native-elements';
 import { connectionContext } from '../../ConnectionContext';
