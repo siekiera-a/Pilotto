@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import { StyleSheet, View } from "react-native";
 import { Overlay } from "react-native-elements/dist/overlay/Overlay";
+import Swiper from "react-native-swiper";
 import { connectionContext } from "../../ConnectionContext";
 import ConnectionBar from "../ConnectionBar";
 import ConnectionView from "./ConnectionView";
 import MediaKeysView from "./MediaKeysView";
+import SystemKeysView from "./SystemKeysView";
 
 export default function MainView() {
   const { connected } = useContext(connectionContext);
@@ -13,7 +15,10 @@ export default function MainView() {
     <View style={styles.container}>
       {connected ? (
         <>
-          <MediaKeysView />
+          <Swiper style={styles.wrapper} loop={false} activeDotColor="#F72585">
+            <MediaKeysView />
+            <SystemKeysView />
+          </Swiper>
           <ConnectionBar />
         </>
       ) : (
@@ -26,6 +31,7 @@ export default function MainView() {
 }
 
 const styles = StyleSheet.create({
+  wrapper: {},
   container: {
     flex: 1,
     backgroundColor: "#fff",
