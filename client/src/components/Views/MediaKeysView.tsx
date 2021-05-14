@@ -1,12 +1,12 @@
 import React, { useCallback, useContext } from "react";
 import { View, StyleSheet } from "react-native";
-import { connectionContext } from "../ConnectionContext";
-import { Command } from "../ContextTypes";
-import NextButton from "./Buttons/NextButton";
-import PlayPauseButton from "./Buttons/PlayPauseButton";
-import PrevButton from "./Buttons/PrevButton";
-import VolumeDownButton from "./Buttons/VolumeDownButton";
-import VolumeUpButton from "./Buttons/VolumeUpButton";
+import { connectionContext } from "../../ConnectionContext";
+import { Command } from "../../ContextTypes";
+import NextButton from "../Buttons/NextButton";
+import PlayPauseButton from "../Buttons/PlayPauseButton";
+import PrevButton from "../Buttons/PrevButton";
+import VolumeDownButton from "../Buttons/VolumeDownButton";
+import VolumeUpButton from "../Buttons/VolumeUpButton";
 
 export default function MediaKeysView() {
   const { send } = useContext(connectionContext);

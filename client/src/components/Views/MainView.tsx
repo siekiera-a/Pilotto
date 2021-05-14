@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Overlay } from 'react-native-elements/dist/overlay/Overlay';
-import { connectionContext } from '../ConnectionContext';
-import ConnectionBar from './ConnectionBar';
-import ConnectionView from './ConnectionView';
-import MediaKeysView from './MediaKeysView';
+import React, { useContext } from "react";
+import { StyleSheet, View } from "react-native";
+import { Overlay } from "react-native-elements/dist/overlay/Overlay";
+import { connectionContext } from "../../ConnectionContext";
+import ConnectionBar from "../ConnectionBar";
+import ConnectionView from "./ConnectionView";
+import MediaKeysView from "./MediaKeysView";
 
 export default function MainView() {
   const { connected } = useContext(connectionContext);
@@ -28,11 +28,11 @@ export default function MainView() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
   modal: {
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
 });

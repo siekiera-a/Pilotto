@@ -7,7 +7,7 @@ import React, {
 } from 'react';
 import { StyleSheet, TextInput, View, Alert } from 'react-native';
 import { Button, Input } from 'react-native-elements';
-import { connectionContext } from '../ConnectionContext';
+import { connectionContext } from '../../ConnectionContext';
 
 export default function ConnectionView() {
   const inputRef = useRef() as React.MutableRefObject<TextInput>;
