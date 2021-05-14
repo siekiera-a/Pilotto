@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { connectionContext } from '../../ConnectionContext';
 
 export default function ConnectionBar() {
-  const { serverAddress } = useContext(connectionContext);
+  const { serverAddress, disconnect } = useContext(connectionContext);
 
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={disconnect}>
       <Text>{serverAddress}</Text>
-    </View>
+    </TouchableOpacity>
   );
 }
 
