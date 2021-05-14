@@ -54,10 +54,14 @@ export function ConnectionContextProvider({
             setErrorMessage('Some error occured!');
           } else {
             setErrorMessage(
-              err.reason ? err.reason : `Lost connection to: ${ip}`
+              `Lost connection to: ${ip}${
+                err.reason ? ` with cause: ${err.reason}.` : ''
+              }`
             );
           }
-          console.error(err);
+          setConnected(false);
+          setServerAddress('');
+          setConnection(null);
         }
       );
 
