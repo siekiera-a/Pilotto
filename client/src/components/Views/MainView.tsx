@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { StyleSheet, View } from 'react-native';
-import { useTheme } from 'react-native-elements';
+import { View } from 'react-native';
+import { FullTheme, makeStyles, useTheme } from 'react-native-elements';
 import { Overlay } from 'react-native-elements/dist/overlay/Overlay';
 import Swiper from 'react-native-swiper';
 import { connectionContext } from '../../ConnectionContext';
@@ -12,16 +12,13 @@ import SystemKeysView from './SystemKeysView';
 export default function MainView() {
   const { connected } = useContext(connectionContext);
   const { theme } = useTheme();
+  const styles = useStyles();
 
   return (
     <View style={styles.container}>
       {connected ? (
         <>
-          <Swiper
-            style={styles.wrapper}
-            loop={false}
-            activeDotColor={theme.colors?.primary}
-          >
+          <Swiper loop={false} activeDotColor={theme.colors?.primary}>
             <MediaKeysView />
             <SystemKeysView />
           </Swiper>
@@ -36,15 +33,14 @@ export default function MainView() {
   );
 }
 
-const styles = StyleSheet.create({
-  wrapper: {},
+const useStyles = makeStyles((theme: Partial<FullTheme>) => ({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: theme.backgroundColor,
     alignItems: 'center',
     justifyContent: 'center',
   },
   modal: {
-    backgroundColor: '#fff',
+    backgroundColor: theme.backgroundColor,
   },
-});
+}));

@@ -11,14 +11,7 @@ export default function NextButton({ next }: INextButtonProps) {
     <FAB
       buttonStyle={styles.nextButton}
       containerStyle={styles.nextButton}
-      icon={
-        <Icon
-          name="skip-next"
-          type="material-community"
-          size={35}
-          color={'#fff'}
-        />
-      }
+      icon={<Icon name="skip-next" type="material-community" size={35} />}
       onPress={next}
     />
   );

@@ -11,7 +11,7 @@ export default function ShutdownButton({ shutdown }: IShutdownButtonProps) {
     <FAB
       buttonStyle={styles.shutdownButton}
       containerStyle={styles.shutdownButton}
-      icon={<Icon name="power" type="ionicon" size={40} color={'#fff'} />}
+      icon={<Icon name="power" type="ionicon" size={40} />}
       onPress={shutdown}
     />
   );

@@ -11,14 +11,7 @@ export default function VolumeUpButton({ volumeUp }: IVolumeUpButtonProps) {
     <FAB
       buttonStyle={styles.volumeUpButton}
       containerStyle={styles.volumeUpButton}
-      icon={
-        <Icon
-          name="volume-plus"
-          type="material-community"
-          size={23}
-          color={'#fff'}
-        />
-      }
+      icon={<Icon name="volume-plus" type="material-community" size={23} />}
       onPress={volumeUp}
     />
   );

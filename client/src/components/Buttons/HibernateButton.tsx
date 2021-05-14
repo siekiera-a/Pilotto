@@ -11,7 +11,7 @@ export default function HibernateButton({ hibernate }: IHibernateButtonProps) {
     <FAB
       buttonStyle={styles.hibernateButton}
       containerStyle={styles.hibernateButton}
-      icon={<Icon name="moon" type="ionicon" size={40} color={'#fff'} />}
+      icon={<Icon name="moon" type="ionicon" size={40} />}
       onPress={hibernate}
     />
   );

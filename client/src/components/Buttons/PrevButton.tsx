@@ -11,14 +11,7 @@ export default function PrevButton({ prev }: IPrevButtonProps) {
     <FAB
       buttonStyle={styles.prevButton}
       containerStyle={styles.prevButton}
-      icon={
-        <Icon
-          name="skip-previous"
-          type="material-community"
-          size={35}
-          color={'#fff'}
-        />
-      }
+      icon={<Icon name="skip-previous" type="material-community" size={35} />}
       onPress={prev}
     />
   );

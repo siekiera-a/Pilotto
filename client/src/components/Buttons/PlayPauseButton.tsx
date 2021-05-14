@@ -15,14 +15,7 @@ export default function PlayPauseButton({
     <FAB
       buttonStyle={styles.playButton}
       containerStyle={[styles.playButton, style]}
-      icon={
-        <Icon
-          name="play-pause"
-          type="material-community"
-          size={50}
-          color={'#fff'}
-        />
-      }
+      icon={<Icon name="play-pause" type="material-community" size={50} />}
       onPress={playPause}
     />
   );

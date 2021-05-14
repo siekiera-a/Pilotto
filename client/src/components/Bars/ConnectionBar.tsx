@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
-import { Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
+import { FullTheme, makeStyles } from 'react-native-elements';
 import { connectionContext } from '../../ConnectionContext';
 
 export default function ConnectionBar() {
   const { serverAddress, disconnect } = useContext(connectionContext);
+  const styles = useStyles();
 
   return (
     <TouchableOpacity style={styles.container} onPress={disconnect}>
@@ -14,12 +16,12 @@ export default function ConnectionBar() {
 
 const padding = 20;
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((theme: Partial<FullTheme>) => ({
   container: {
     width: '100%',
-    backgroundColor: '#CCC',
+    backgroundColor: theme.secondaryBackgroundColor,
     alignItems: 'center',
     paddingTop: padding,
     paddingBottom: padding,
   },
-});
+}));

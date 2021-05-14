@@ -6,6 +6,9 @@ export const darkTheme: Theme = {
   FAB: {
     color: darkPrimary,
   },
+  Icon: {
+    color: '#fff',
+  },
   backgroundColor: '#000',
   secondaryBackgroundColor: '#CCC',
   colors: {

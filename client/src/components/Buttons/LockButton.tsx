@@ -11,7 +11,7 @@ export default function LockButton({ lock }: ILockButtonProps) {
     <FAB
       buttonStyle={styles.lockButton}
       containerStyle={styles.lockButton}
-      icon={<Icon name="lock-closed" type="ionicon" size={40} color={'#fff'} />}
+      icon={<Icon name="lock-closed" type="ionicon" size={40} />}
       onPress={lock}
     />
   );

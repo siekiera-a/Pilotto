@@ -13,14 +13,7 @@ export default function VolumeDownButton({
     <FAB
       buttonStyle={styles.volumeDownButton}
       containerStyle={styles.volumeDownButton}
-      icon={
-        <Icon
-          name="volume-minus"
-          type="material-community"
-          size={23}
-          color={'#fff'}
-        />
-      }
+      icon={<Icon name="volume-minus" type="material-community" size={23} />}
       onPress={volumeDown}
     />
   );

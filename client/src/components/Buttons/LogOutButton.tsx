@@ -11,14 +11,7 @@ export default function LogOutButton({ logOut }: ILogOutButtonProps) {
     <FAB
       buttonStyle={styles.logOutButton}
       containerStyle={styles.logOutButton}
-      icon={
-        <Icon
-          name="logout"
-          type="material-community"
-          size={40}
-          color={'#fff'}
-        />
-      }
+      icon={<Icon name="logout" type="material-community" size={40} />}
       onPress={logOut}
     />
   );
