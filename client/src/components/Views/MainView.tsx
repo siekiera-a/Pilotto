@@ -3,7 +3,7 @@ import { StyleSheet, View } from "react-native";
 import { Overlay } from "react-native-elements/dist/overlay/Overlay";
 import Swiper from "react-native-swiper";
 import { connectionContext } from "../../ConnectionContext";
-import ConnectionBar from "../ConnectionBar";
+import ConnectionBar from "../Bars/ConnectionBar";
 import ConnectionView from "./ConnectionView";
 import MediaKeysView from "./MediaKeysView";
 import SystemKeysView from "./SystemKeysView";

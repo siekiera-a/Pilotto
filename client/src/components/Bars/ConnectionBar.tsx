@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { connectionContext } from '../ConnectionContext';
+import { connectionContext } from '../../ConnectionContext';
 
 export default function ConnectionBar() {
   const { serverAddress } = useContext(connectionContext);
