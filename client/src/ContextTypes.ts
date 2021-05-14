@@ -18,4 +18,8 @@ export enum Command {
   PREV,
   VOLUME_UP,
   VOLUME_DOWN,
+  HIBERNATE,
+  LOG_OUT,
+  SHUTDOWN,
+  LOCK,
 }
