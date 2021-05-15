@@ -7,6 +7,16 @@ export const darkTheme: Theme = {
   FAB: {
     color: darkPrimary,
   },
+  Input: {
+    inputStyle: {
+      color: '#fff',
+    },
+  },
+  Text: {
+    style: {
+      color: '#fff',
+    },
+  },
   Icon: {
     color: '#fff',
   },
@@ -20,6 +30,16 @@ export const darkTheme: Theme = {
 export const lightTheme: Theme = {
   FAB: {
     color: lightPrimary,
+  },
+  Input: {
+    inputStyle: {
+      color: '#000',
+    },
+  },
+  Text: {
+    style: {
+      color: '#000',
+    },
   },
   Icon: {
     color: '#fff',

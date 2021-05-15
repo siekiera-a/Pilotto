@@ -9,7 +9,7 @@ import {
 import { darkTheme, lightTheme } from '../../themes';
 
 export default function ThemeBar() {
-  const [light, setLight] = useState(false);
+  const [dark, setDark] = useState(true);
   const styles = useStyles(StatusBar.currentHeight);
   const { updateTheme } = useContext(ThemeContext);
 
@@ -17,7 +17,7 @@ export default function ThemeBar() {
     (value: boolean) => {
       const theme = value ? darkTheme : lightTheme;
       updateTheme(theme);
-      setLight((v) => !v);
+      setDark((v) => !v);
     },
     [updateTheme]
   );
@@ -25,7 +25,7 @@ export default function ThemeBar() {
   return (
     <View style={styles.container}>
       <Switch
-        value={light}
+        value={dark}
         style={styles.themeSwitch}
         onValueChange={changeTheme}
       />

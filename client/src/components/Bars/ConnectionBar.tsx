@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { Text, TouchableOpacity } from 'react-native';
-import { FullTheme, makeStyles } from 'react-native-elements';
+import { TouchableOpacity } from 'react-native';
+import { FullTheme, makeStyles, Text } from 'react-native-elements';
 import { connectionContext } from '../../ConnectionContext';
 
 export default function ConnectionBar() {

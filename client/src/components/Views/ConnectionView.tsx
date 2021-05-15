@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Alert, StyleSheet, TextInput, View } from 'react-native';
 import { Button, Input, ThemeContext } from 'react-native-elements';
 import { connectionContext } from '../../ConnectionContext';
-import { lightTheme } from '../../themes';
+import { darkTheme } from '../../themes';
 
 export default function ConnectionView() {
   const inputRef = useRef() as React.MutableRefObject<TextInput>;
@@ -13,7 +13,7 @@ export default function ConnectionView() {
   const { updateTheme } = useContext(ThemeContext);
 
   useEffect(() => {
-    updateTheme(lightTheme);
+    updateTheme(darkTheme);
   }, []);
 
   const connectToServer = () => {
