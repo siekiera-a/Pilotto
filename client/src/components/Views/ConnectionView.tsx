@@ -1,13 +1,20 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
-import { StyleSheet, TextInput, View, Alert } from 'react-native';
-import { Button, Input } from 'react-native-elements';
+import { Alert, StyleSheet, TextInput, View } from 'react-native';
+import { Button, Input, ThemeContext } from 'react-native-elements';
 import { connectionContext } from '../../ConnectionContext';
+import { lightTheme } from '../../themes';
 
 export default function ConnectionView() {
   const inputRef = useRef() as React.MutableRefObject<TextInput>;
   const { connect, error, errorMessage } = useContext(connectionContext);
 
   const [ip, setIp] = useState('');
+
+  const { updateTheme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    updateTheme(lightTheme);
+  }, []);
 
   const connectToServer = () => {
     inputRef.current.blur();
