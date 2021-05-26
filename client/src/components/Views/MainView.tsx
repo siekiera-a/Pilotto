@@ -6,7 +6,6 @@ import {
   useTheme,
   withTheme,
 } from 'react-native-elements';
-import { Overlay } from 'react-native-elements/dist/overlay/Overlay';
 import Swiper from 'react-native-swiper';
 import { connectionContext } from '../../ConnectionContext';
 import ConnectionBar from '../Bars/ConnectionBar';
@@ -32,9 +31,9 @@ function MainView() {
           <ConnectionBar />
         </>
       ) : (
-        <Overlay isVisible fullScreen overlayStyle={styles.modal}>
+        <View style={[styles.container, styles.modal]}>
           <ConnectionView />
-        </Overlay>
+        </View>
       )}
     </View>
   );
@@ -50,6 +49,6 @@ const useStyles = makeStyles((theme: Partial<FullTheme>) => ({
     justifyContent: 'center',
   },
   modal: {
-    backgroundColor: theme.backgroundColor,
+    width: '100%',
   },
 }));
